@@ -12,11 +12,11 @@
     fxFlex="25%"
     fxFlex.xs="100%"
     fxFlex.sm="33%"
-    *ngFor="let num of [1, 2, 3, 4, 5, 6, 7]"
+    *ngFor="let card of gameSettingsFacade.cards$ | async"
   >
     <mat-card class="mat-elevation-z4">
       <mat-card-content>
-        <img mat-card-image src="./../../assets/cards/angular.png" />
+        <img mat-card-image [src]="'./../../assets/cards/' + card['cardImage'] + '.png'" />
       </mat-card-content>
     </mat-card>
   </div>

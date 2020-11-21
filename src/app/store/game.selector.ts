@@ -30,3 +30,11 @@ export const getBestNumberOfSteps = createSelector(
   selectFeature,
   (state: State) => state.gameSettings.bestNumberOfSteps
 );
+
+/**
+ * Get cards.
+ */
+export const getCards = createSelector(
+  selectFeature,
+  (state: State) => state.gameSettings.cards
+);

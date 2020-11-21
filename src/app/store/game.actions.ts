@@ -6,6 +6,8 @@ export const UpdateStepCounter = '[Memory game] Update step counter';
 export const UpdateBestNumberOfSteps =
   '[Memory game] Update best number of steps';
 
+export const InitGameCards = '[Memory game] Init game cards';
+
 /**
  * Card number selection change.
  */
@@ -23,6 +25,10 @@ export class UpdateBestNumberOfStepsAction implements Action {
   public readonly type = UpdateBestNumberOfSteps;
   constructor(public bestNumberOfSteps: number) {}
 }
+export class InitGameCardsAction implements Action {
+  public readonly type = InitGameCards;
+  constructor(public cardNumber: number) {}
+}
 
 /**
  * Exports a type with all actions for reducer.
@@ -30,4 +36,5 @@ export class UpdateBestNumberOfStepsAction implements Action {
 export type Actions =
   | CardNumberSelectionChangeAction
   | UpdateStepCounterAction
-  | UpdateBestNumberOfStepsAction;
+  | UpdateBestNumberOfStepsAction
+  | InitGameCardsAction;

@@ -24,6 +24,7 @@ export class CardNumberSelectorComponent {
     if ($event && $event.value) {
       const selectedCardNumber = $event.value * 2;
       this.gameSettingsFacade.selectCardNumber(selectedCardNumber);
+      this.gameSettingsFacade.initGameCards(selectedCardNumber);
     }
   }
 }
