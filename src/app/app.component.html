@@ -11,9 +11,9 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-
-  <card-number-selector></card-number-selector>
-
+  <card-number-selector
+    *ngIf="isCardNumberSelectorVisible"
+  ></card-number-selector>
 
   <a routerLink="/landing-page">
     <button>Rules</button>
