@@ -1,0 +1,84 @@
+@import "../../variables.scss";
+
+:host ::ng-deep {
+  .mat-form-field-flex {
+    width: 80px;
+  }
+}
+
+.center-container {
+  position: relative;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+  height: 50px;
+//   background: grey;
+
+  .selector-wrapper {
+    height: 50px;
+    .selector-text {
+      width: 60px;
+      float: left;
+    }
+    .selector {
+      float: right;
+    }
+    width: 150px;
+  }
+
+  .btn {
+    position: absolute;
+    display: inline-block;
+    height: 20px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 120px;
+  }
+  .new-game {
+    right: 0;
+    background-color: #fb4e1a;
+  }
+  .new-game:hover {
+    background-color: red;
+  }
+  .rules {
+    left: 0;
+    background-color: #e2bf14;
+  }
+  .rules:hover {
+    background-color: #ffd400;
+  }
+  .btn:hover {
+    cursor: pointer;
+  }
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: $headerBackgroundColor;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}

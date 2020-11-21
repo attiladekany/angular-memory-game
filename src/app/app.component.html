@@ -7,23 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<style></style>
-
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <card-number-selector
-    *ngIf="isCardNumberSelectorVisible"
-  ></card-number-selector>
-
-  <a routerLink="/landing-page">
-    <button>Rules</button>
-  </a>
-
-  <a routerLink="/game-page">
-    <button>Start a new game</button>
-  </a>
-</div>
-
+<header-panel></header-panel>
 
 <div class="content" role="main">
   <router-outlet class="dynamic-content"></router-outlet>

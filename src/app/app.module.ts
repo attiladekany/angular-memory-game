@@ -16,6 +16,7 @@ import { CardNumberSelectorComponent } from './game-page/card-number-selector/ca
 import { featureStoreName } from './store/feature-store-name';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store';
+import { HeaderPanelComponent } from './header-panel/header-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { reducers } from './store';
     LandingPageComponent,
     GamePageComponent,
     CardNumberSelectorComponent,
+    HeaderPanelComponent,
   ],
   imports: [
     BrowserModule,
