@@ -1,5 +1,5 @@
 <mat-form-field appearance="fill">
-  <mat-select>
+  <mat-select (selectionChange)="selectionChange($event)">
     <mat-option *ngFor="let option of options" [value]="option.value">
       {{ option.viewValue }}
     </mat-option>

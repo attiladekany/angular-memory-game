@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { GameSettingsFacade } from './store/game.facade';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,10 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent {
   public isCardNumberSelectorVisible: boolean = false;
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    // public gameSettingsFacade: GameSettingsFacade
+  ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((e) => {

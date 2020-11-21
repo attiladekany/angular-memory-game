@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GameSettingsFacade } from 'src/app/store/game.facade';
 
 @Component({
   selector: 'card-number-selector',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['card-number-selector.component.scss'],
 })
 export class CardNumberSelectorComponent {
+  constructor(private gameSettingsFacade: GameSettingsFacade) {}
+
   options: Options[] = [
     { value: '3', viewValue: '3' },
     { value: '4', viewValue: '4' },
@@ -16,6 +19,13 @@ export class CardNumberSelectorComponent {
     { value: '9', viewValue: '9' },
     { value: '10', viewValue: '10' },
   ];
+
+  public selectionChange($event: any): void {
+    if ($event && $event.value) {
+      const selectedCardNumber = $event.value * 2;
+      this.gameSettingsFacade.selectCardNumber(selectedCardNumber);
+    }
+  }
 }
 
 interface Options {

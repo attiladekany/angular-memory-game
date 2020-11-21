@@ -13,6 +13,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { GamePageComponent } from './game-page/game-page.component';
 import { MatSelectModule } from '@angular/material/select';
 import { CardNumberSelectorComponent } from './game-page/card-number-selector/card-number-selector.component';
+import { featureStoreName } from './store/feature-store-name';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './store';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { CardNumberSelectorComponent } from './game-page/card-number-selector/ca
     MatButtonModule,
     MatSelectModule,
     FlexLayoutModule,
+    StoreModule.forRoot({}),
+    StoreModule.forFeature(featureStoreName, reducers),
   ],
   providers: [],
   bootstrap: [AppComponent],
