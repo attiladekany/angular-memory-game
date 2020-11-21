@@ -11,6 +11,10 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
+
+  <card-number-selector></card-number-selector>
+
+
   <a routerLink="/landing-page">
     <button>Rules</button>
   </a>
@@ -21,8 +25,10 @@
 </div>
 
 <div class="content" role="main">
-  <router-outlet></router-outlet>
+  <router-outlet class="dynamic-content"></router-outlet>
 </div>
+
+<!-- Ref.:https://medium.com/javascript-in-plain-english/create-a-responsive-card-grid-in-angular-using-flex-layout-3d1b58411e7a -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
