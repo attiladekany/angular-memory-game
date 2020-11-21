@@ -1,20 +1,37 @@
-<h1>Game page</h1>
 <h2>
   You play the game with: {{ gameSettingsFacade.cardNumber$ | async }} card.
 </h2>
-<h2>Best: {{ gameSettingsFacade.bestNumberOfSteps$ | async }}</h2>
-<h2>Steps: {{ gameSettingsFacade.stepCounter$ | async }}</h2>
+
+<div class="header">
+  <div class="current-steps vertical-center">
+    <span
+      >Current tries: <b>{{ gameSettingsFacade.stepCounter$ | async }}</b></span
+    >
+  </div>
+  <div class="best-steps center vertical-center">
+    <div>Best:</div>
+    <div>
+      <span class="best-value">
+        <b>{{ gameSettingsFacade.bestNumberOfSteps$ | async }}</b></span
+      >
+    </div>
+  </div>
+  <div class="btn restart vertical-center">RESTART</div>
+</div>
 
 <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
   <div
-    fxFlex="25%"
+    fxFlex="16%"
     fxFlex.xs="100%"
     fxFlex.sm="33%"
     *ngFor="let card of gameSettingsFacade.cards$ | async"
   >
     <mat-card class="mat-elevation-z4">
       <mat-card-content>
-        <img mat-card-image [src]="'./../../assets/cards/' + card['cardImage'] + '.png'" />
+        <img
+          mat-card-image
+          [src]="'./../../assets/cards/' + card['cardImage'] + '.png'"
+        />
       </mat-card-content>
     </mat-card>
   </div>

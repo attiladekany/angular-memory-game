@@ -9,4 +9,9 @@ export enum CardImages {
   splendex = 'splendex',
   ts = 'ts',
   webpack = 'webpack',
+  js = 'js',
+  csharp = 'csharp',
+  netcore = 'netcore',
+  linus = 'linus',
+  gitlogo = 'gitlogo',
 }

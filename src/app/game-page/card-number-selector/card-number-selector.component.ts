@@ -18,6 +18,11 @@ export class CardNumberSelectorComponent {
     { value: '8', viewValue: '8' },
     { value: '9', viewValue: '9' },
     { value: '10', viewValue: '10' },
+    { value: '11', viewValue: '11' },
+    { value: '12', viewValue: '12' },
+    { value: '13', viewValue: '13' },
+    { value: '14', viewValue: '14' },
+    { value: '15', viewValue: '15' },
   ];
 
   public selectionChange($event: any): void {
