@@ -40,10 +40,8 @@ export class GameSettingsFacade extends Facade<fromRoot.State> {
     );
   }
 
-  public initGameCards(cardNumber): void{
-    this.dispatch(
-      new fromHistoryActions.InitGameCardsAction(cardNumber)
-    );
+  public initGameCards(cardNumber: number): void {
+    this.dispatch(new fromHistoryActions.InitGameCardsAction(cardNumber));
   }
 
   public updateBestNumberOfSteps(bestNumberOfSteps: number): void {
@@ -54,5 +52,9 @@ export class GameSettingsFacade extends Facade<fromRoot.State> {
 
   public updateStepCounter(stepCounter: number): void {
     this.dispatch(new fromHistoryActions.UpdateStepCounterAction(stepCounter));
+  }
+
+  public restartGame(cardNumber: number): void {
+    this.dispatch(new fromHistoryActions.RestartGameAction(cardNumber));
   }
 }

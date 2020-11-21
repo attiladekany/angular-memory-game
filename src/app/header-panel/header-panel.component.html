@@ -1,12 +1,9 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <div class="center-container">
-    <div class="center selector-wrapper">
+    <div class="center selector-wrapper" *ngIf="isCardNumberSelectorVisible">
       <span class="selector-text vertical-center"> Deck size </span>
-      <card-number-selector
-        class="selector"
-        *ngIf="isCardNumberSelectorVisible"
-      ></card-number-selector>
+      <card-number-selector class="selector"></card-number-selector>
     </div>
 
     <div class="btn rules vertical-center" routerLink="/landing-page">

@@ -42,6 +42,14 @@ export function reducer(
     case fromGameActions.InitGameCards:
       return {
         ...state,
+        stepCounter: 0,
+        cards: getGameCards(action.cardNumber),
+      };
+
+    case fromGameActions.RestartGame:
+      return {
+        ...state,
+        // selectedCardNumber: action.cardNumber,
         cards: getGameCards(action.cardNumber),
       };
 

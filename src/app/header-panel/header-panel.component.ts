@@ -3,7 +3,6 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
-  moduleId: module.id,
   selector: 'header-panel',
   templateUrl: 'header-panel.component.html',
   styleUrls: ['header-panel.component.scss'],
