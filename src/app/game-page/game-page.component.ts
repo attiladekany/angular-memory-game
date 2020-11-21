@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Card } from '../models/card';
 import { GameSettingsFacade } from '../store/game.facade';
 
 @Component({
@@ -19,5 +20,9 @@ export class GamePageComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.destroy$$.next();
+  }
+
+  public cardClicked(card: Card): void {
+    this.gameSettingsFacade.flipChange(card);
   }
 }

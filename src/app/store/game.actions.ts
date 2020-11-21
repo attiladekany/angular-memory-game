@@ -1,4 +1,5 @@
 import { Action } from '@ngrx/store';
+import { Card } from '../models/card';
 
 export const CardNumberSelectionChange =
   '[Memory game] Card number selection change';
@@ -8,6 +9,7 @@ export const UpdateBestNumberOfSteps =
 
 export const InitGameCards = '[Memory game] Init game cards';
 export const RestartGame = '[Memory game] Restart the game';
+export const FlipChange = '[Memory game] Flip change';
 
 /**
  * Card number selection change.
@@ -34,6 +36,11 @@ export class RestartGameAction implements Action {
   public readonly type = RestartGame;
   constructor(public cardNumber: number) {}
 }
+export class FlipChangeAction implements Action {
+  public readonly type = FlipChange;
+  constructor(public card: Card) {}
+}
+
 /**
  * Exports a type with all actions for reducer.
  */
@@ -42,4 +49,5 @@ export type Actions =
   | UpdateStepCounterAction
   | UpdateBestNumberOfStepsAction
   | InitGameCardsAction
-  | RestartGameAction;
+  | RestartGameAction
+  | FlipChangeAction;

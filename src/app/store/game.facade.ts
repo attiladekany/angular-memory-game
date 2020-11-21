@@ -14,6 +14,7 @@ import { Card } from '../models/card';
   providedIn: 'root',
 })
 export class GameSettingsFacade extends Facade<fromRoot.State> {
+
   public cardNumber$: Observable<number>;
   public bestNumberOfSteps$: Observable<number>;
   public stepCounter$: Observable<number>;
@@ -56,5 +57,9 @@ export class GameSettingsFacade extends Facade<fromRoot.State> {
 
   public restartGame(cardNumber: number): void {
     this.dispatch(new fromHistoryActions.RestartGameAction(cardNumber));
+  }
+  
+  public flipChange(card: Card): void {
+    this.dispatch(new fromHistoryActions.FlipChangeAction(card));
   }
 }
